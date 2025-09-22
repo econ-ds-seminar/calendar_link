@@ -4,7 +4,7 @@ PRODID:-//Economics Data Science Seminar//Event//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:economics-seminar-20250930@ethz.ch
+UID:seminar-20250925@ethz.ch
 DTSTART:20250925T140000Z
 DTEND:20250925T150000Z
 SUMMARY:Economics + Data Science Online Seminar Series
