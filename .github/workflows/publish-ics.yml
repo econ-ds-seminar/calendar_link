@@ -1,0 +1,29 @@
+name: Publish ICS to Latest Release
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "EDOSS_event.ics"     # adjust if you move the file
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Publish/Update 'latest' release with ICS
+        uses: ncipollo/release-action@v1
+        with:
+          tag: latest
+          name: "EDOSS Seminar — Latest"
+          body: "Weekly updated .ics for the EDOSS seminar."
+          makeLatest: true
+          allowUpdates: true
+          replacesArtifacts: true
+          artifacts: "EDOSS_event.ics"
+          artifactContentType: "text/calendar"
